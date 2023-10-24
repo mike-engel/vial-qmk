@@ -18,6 +18,22 @@
 
 #pragma once
 
+#include "config_common.h"
+
+/* Key matrix configuration. */
+#define MATRIX_ROWS 10 // Rows are doubled-up.
+#define MATRIX_COLS 6
+
+#define DIODE_DIRECTION COL2ROW
+
+/* Set 0 if debouncing isn't needed. */
+#define DEBOUNCE 5
+
+/* RGB settings. */
+#define RGBLED_NUM 58
+#define RGBLED_SPLIT \
+    { 29, 29 }
+
 /* RGB matrix support. */
 #ifdef RGB_MATRIX_ENABLE
 #    define SPLIT_TRANSPORT_MIRROR
