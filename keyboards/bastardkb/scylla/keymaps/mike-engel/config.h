@@ -43,7 +43,7 @@
             { 0, 5 }
 #        define VIAL_UNLOCK_COMBO_COLS \
             { 0, 0 }
-#        define VIAL_COMBO_ENTRIES 4
+#        define VIAL_COMBO_ENTRIES 6
 #    endif // VIAL_ENABLE
 
 /* Disable action features. */
