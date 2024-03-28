@@ -21,8 +21,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define USE_SERIAL
 
-#define VIAL_KEYBOARD_UID { 0x97, 0x98, 0x0D, 0x38, 0x37, 0x84, 0xBB, 0xDA }
-    
+#ifdef VIA_ENABLE
+/* VIA configuration. */
+#    define DYNAMIC_KEYMAP_LAYER_COUNT 4
+#    define VIAL_TAP_DANCE_ENTRIES 0
+
+#    ifdef VIAL_ENABLE
+/** Vial configuration. */
 // ESC and ANSI Enter keys
-#define VIAL_UNLOCK_COMBO_ROWS { 0, 2 }
-#define VIAL_UNLOCK_COMBO_COLS { 0, 13 }
+#        define VIAL_KEYBOARD_UID \
+            { 0x5B, 0x76, 0x3F, 0xFF, 0xA8, 0x70, 0x33, 0xC8 }
+#        define VIAL_UNLOCK_COMBO_ROWS \
+            { 0, 2 }
+#        define VIAL_UNLOCK_COMBO_COLS \
+            { 0, 2 }
+#        define VIAL_COMBO_ENTRIES 4
+#    endif // VIAL_ENABLE
+
+/* Disable action features. */
+#    define NO_ACTION_MACRO    // Disable old-style macro handling.
+#    define NO_ACTION_FUNCTION // Disable old-style function handling.
+#endif                         // VIA_ENABLE

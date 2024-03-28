@@ -13,6 +13,11 @@ AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 VIA_ENABLE = yes
 VIAL_ENABLE = yes
+TAP_DANCE_ENABLE = no
+VIALRGB_ENABLE = no
+CAPS_WORD_ENABLE = yes
+KEY_OVERRIDE_ENABLE = no
+COMBO_ENABLE = yes
 
 SPLIT_KEYBOARD = yes
 
